@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Cart - Vinyl Shop</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-wrapper">
+        <div class="logo">
+          <div class="logo-circle"></div>
+          <h1>VINYL SHOP</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="Web.html">Home</a></li>
+            <li>
+              <a class="active" href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i> Cart
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container cart-page">
+      <h2>Your Cart</h2>
+      <div id="cart-list"></div>
+      <p class="cart-total" id="cart-total"></p>
+
+      <h2>Shipping</h2>
+      <table class="shipping-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Standard</td>
+            <td>49 kr</td>
+            <td>3-5 days</td>
+          </tr>
+          <tr>
+            <td>Express</td>
+            <td>99 kr</td>
+            <td>1-2 days</td>
+          </tr>
+          <tr>
+            <td>Pick up</td>
+            <td>0 kr</td>
+            <td>Today</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Best choice</td>
+            <td>Standard</td>
+            <td>Good price</td>
+          </tr>
+        </tfoot>
+      </table>
+    </main>
+    <footer>
+      <p>Vinyl Shop</p>
+    </footer>
+
+    <script>
+      const cart = JSON.parse(localStorage.getItem("vinylCart") || "[]");
+      const list = document.getElementById("cart-list");
+      const total = document.getElementById("cart-total");
+
+      if (cart.length === 0) {
+        list.innerHTML = '<p class="empty-cart">Your cart is empty.</p>';
+      } else {
+        list.innerHTML = cart
+          .map(
+            (item) => `
+              <div class="cart-item">
+                <div>
+                  <h3>${item.title}</h3>
+                  <p>${item.artist}</p>
+                </div>
+                <span>${item.price}</span>
+              </div>
+            `,
+          )
+          .join("");
+
+        const sum = cart.reduce((total, item) => total + parseInt(item.price), 0);
+        total.textContent = `Total: ${sum} kr`;
+      }
+    </script>
+  </body>
+</html>

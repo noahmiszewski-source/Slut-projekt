@@ -1,102 +1,120 @@
 <!doctype html>
 <html lang="sv">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vinyl Shop</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-</head>
-
-<body>
-  <header>
-    <div class="container nav-wrapper">
-      <div class="logo">
-        <div class="logo-circle"></div>
-        <h1>VINYL SHOP</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Vinyl Shop</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-wrapper">
+        <div class="logo">
+          <div class="logo-circle"></div>
+          <h1>VINYL SHOP</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a class="active" href="Web.html">Home</a></li>
+          </ul>
+        </nav>
+        <div class="meny-icons">
+          <a class="icon" href="search.html" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a class="icon" href="cart.html" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </a>
+        </div>
       </div>
-      <nav>
-        <ul>
-          <li><a href="#">New Arrivals</a></li>
-          <li><a href="#">Genres</a></li>
-          <li><a href="#">Artists</a></li>
-        </ul>
-      </nav>
-      <div class="nav-icons">
-        <i class="fa-solid fa-magnifying-glass"></i><i class="fa-solid fa-cart-shopping"></i>
+    </header>
+    <section class="hero">
+      <div class="container">
+        <h2>Discover Rare Vinyl Records</h2>
+        <p>Curated collection of classic and contemporary albums on vinyl</p>
+        <a href="#shop" class="shop">Shop Now</a>
       </div>
-    </div>
-  </header>
-  <section class="hero">
-    <div class="container">
-      <h2>Discover Rare Vinyl Records</h2>
-      <p>Curated collection of classic and contemporary albums on vinyl</p>
-      <a href="#" class="btn-shop">Shop Now</a>
-    </div>
-  </section>
-  <main class="container">
-    <div class="filter-bar">
-      <h3>Featured Albums</h3>
-      <div class="controls">
-        <select>
-          <option>All Genres</option>
-        </select><select>
-          <option>Sort by</option>
-        </select>
+    </section>
+    <main class="container" id="shop">
+      <div class="album-grid">
+        <div class="album-card">
+          <img src="images/Thriller.jpg" alt="Thriller Album Cover" />
+          <h4>Thriller</h4>
+          <p>Michael Jackson</p>
+          <span class="price">299 kr</span
+          ><button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="album-card">
+          <img src="images/Rumours.jpg" alt="Rumours Album Cover" />
+          <h4>Rumours</h4>
+          <p>Fleetwood Mac</p>
+          <span class="price">299 kr</span
+          ><button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="album-card">
+          <img src="images/Nevermind.jpg" alt="Nevermind Album Cover" />
+          <h4>Nevermind</h4>
+          <p>Nirvana</p>
+          <span class="price">299 kr</span
+          ><button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="album-card">
+          <img
+            src="images/Dark side of the moon.png"
+            alt="Dark Side of the Moon Album Cover"
+          />
+          <h4>Dark Side of the Moon</h4>
+          <p>Pink Floyd</p>
+          <span class="price">399 kr</span
+          ><button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="album-card">
+          <img
+            src="images/Hotel california.jpg"
+            alt="Hotel California Album Cover"
+          />
+          <h4>Hotel California</h4>
+          <p>Eagles</p>
+          <span class="price">249 kr</span
+          ><button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="album-card">
+          <img
+            src="images/GKMC.jpg"
+            alt="Good Kid, M.A.A.D City Album Cover"
+          />
+          <h4>Good Kid, M.A.A.D City</h4>
+          <p>Kendrick Lamar</p>
+          <span class="price">349 kr</span
+          ><button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="album-card">
+          <img
+            src="images/RAM.jpg"
+            alt="Random Access Memories Album Cover"
+          />
+          <h4>Random Access Memories</h4>
+          <p>Daft Punk</p>
+          <span class="price">399 kr</span
+          ><button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="album-card">
+          <img src="images/Currents.jpg" alt="Currents Album Cover" />
+          <h4>Currents</h4>
+          <p>Tame Impala</p>
+          <span class="price">399 kr</span
+          ><button class="add-to-cart">Add to Cart</button>
+        </div>
       </div>
-    </div>
-    <div class="album-grid">
-      <div class="album-card">
-        <div class="record-placeholder"></div>
-        <img src="Vinyl bilder/Thriller.jpg " alt="Thriller Album Cover" /> 
-        <h4>Thriller</h4>
-        <p>Michael Jackson</p>
-      </div>
-      <div class="album-card">
-        <div class="record-placeholder"></div>
-        <img src="Vinyl bilder/Rumours.jpg" alt="Rumours Album Cover" />
-      <h4>Rumours</h4>
-        <p>Fleetwood Mac</p>
-      </div>
-      <div class="album-card">
-        <div class="record-placeholder"></div>
-        <img src="Vinyl bilder/Nevermind.jpg" alt="Nevermind Album Cover" />
-        <h4>Nevermind</h4>
-        <p>Nirvana</p>
-      </div>
-      <div class="album-card">
-        <div class="record-placeholder"></div>
-        <img src="Vinyl bilder/Dark side of the moon.png" alt="Dark Side of the Moon Album Cover" />
-        <h4>Dark Side of the Moon</h4>
-        <p>Pink Floyd</p>
-      </div>
-      <div class="album-card">
-        <div class="record-placeholder"></div>
-        <img src="Vinyl bilder/Hotel california.jpg" alt="Hotel California Album Cover" />
-        <h4>Hotel California</h4>
-        <p>Eagles</p>
-      </div>
-      <div class="album-card">
-        <div class="record-placeholder"></div>
-        <img src="Vinyl bilder/GKMC.jpg" alt="Good Kid, M.A.A.D City Album Cover" />
-        <h4>Good Kid, M.A.A.D City</h4>
-        <p>Kendrick Lamar</p>
-      </div>
-      <div class="album-card">
-        <div class="record-placeholder"></div>
-        <img src="Vinyl bilder/RAM.jpg" alt="Random Access Memories Album Cover" />
-        <h4>Random Access Memories</h4>
-        <p>Daft Punk</p>
-      </div>
-      <div class="album-card">
-        <div class="record-placeholder"></div>
-        <img src="Vinyl bilder/Currents.jpg" alt="Currents Album Cover" />
-        <h4>Currents</h4>
-        <p>Tame Impala</p>
-      </div>
-    </div>
-  </main>
-</body>
-
+    </main>
+    <footer>
+      <p>Vinyl Shop</p>
+    </footer>
+    <script src="UI.js"></script>
+  </body>
 </html>
